@@ -307,7 +307,7 @@ ul#menu-list li a {
      top: 2vh;
      right: 15px;
      width: 50px;
-     height: 50px;
+     height: 45px;
      box-sizing: border-box;
      cursor: pointer;
      animation: colorchange 50s;
@@ -324,13 +324,13 @@ ul#menu-list li a {
 }
 
 .sidebarBtn span {
-     margin: 0 auto;
      display: block;
+     margin: auto;
      width: 35px;
-     height: 2px;
+     height: 1px;
      background: #fff;
      position: absolute;
-     top: 24px;
+     top: 22px;
      transition: 0.6s;
      height: 2px;
 }
@@ -722,7 +722,7 @@ footer p {
 }
 
 #subtitle-list li {
-     transform: translate(-4vh,-1vh);
+     transform: translate(-7.5vh,-1vh);
      display: inline-block;
 }
 
