@@ -1,0 +1,1547 @@
+/*!
+    Title: Tanner Lane's Portfolio Website
+    Version: 1.0.1
+    Last Change: 11/01/2017
+    Author: Tanner Lane
+    Repo: https://github.com/tal763/www.tanneralane.com.git
+
+    Description: This file contains all the styles associated with the page
+    that don't come from third party libraries. This file gets compiled using
+    Gulp and send to the /css folder which is then loaded on the page.
+*/
+/*
+    File Contents:
+
+        1. Variables
+        2. Mixins
+        3. Global Styles
+        4. Lead Styles
+        5. About Styles
+        6. Experience Styles
+        7. Education Styles
+        8. Project Styles
+        9. Skills Styles
+        10. Contact Styles
+        11. Optional Section Styles
+        12. Media Queries
+*/
+/*
+    ------------------------
+    ----- 1. Variables -----
+    ------------------------
+*/
+// Define base and accent colors
+$base-color: #292929;
+$base-color-hover: darken($base-color, 10%);
+// Define background colors
+$background: #fff;
+// $background-alt: #f2f2f5;
+// Define border colors
+$border: #dcd9d9;
+// Define text colors
+$text: #74808a;
+
+#heading-font{
+     animation: colorchangeF 50s;
+     /* animation-name followed by duration in seconds*/
+     animation-iteration-count: 200;
+     /* you could also use milliseconds (ms) or something like 2.5s */
+     -webkit-animation: colorchangeF 50s;
+     /* Chrome and Safari */
+     -webkit-animation-iteration-count: 200;
+}
+
+#heading-background{
+     color: white;
+     animation: colorchange 50s;
+     /* animation-name followed by duration in seconds*/
+     animation-iteration-count: 200;
+     /* you could also use milliseconds (ms) or something like 2.5s */
+     -webkit-animation: colorchange 50s;
+     /* Chrome and Safari */
+     -webkit-animation-iteration-count: 200;
+}
+
+// strong {
+//      animation: colorchangeF 50s;
+//      /* animation-name followed by duration in seconds*/
+//      animation-iteration-count: 200;
+//      /* you could also use milliseconds (ms) or something like 2.5s */
+//      -webkit-animation: colorchangeF 50s;
+//      /* Chrome and Safari */
+//      -webkit-animation-iteration-count:F 200;
+// }
+/*
+    ---------------------
+    ----- 2. Mixins -----
+    ---------------------
+*/
+@mixin transition($duration: 0.5s, $func: ease, $property: all) {
+     transition: #{$duration} #{$func} #{$property};
+}
+@mixin placeholder {
+     &::-webkit-input-placeholder {
+          @content;
+     }
+
+     &:-moz-placeholder {
+          @content;
+          opacity: 1;
+     }
+
+     &::-moz-placeholder {
+          @content;
+          opacity: 1;
+     }
+
+     &:-ms-input-placeholder {
+          @content;
+     }
+}
+/*
+    ----------------------------
+    ----- 3. Global Styles -----
+    ----------------------------
+*/
+
+html {
+	-webkit-font-smoothing: antialiased;
+     // font-smoothing: antialiased;
+}
+
+body {
+     font-family: 'Roboto';
+     font-size: 16px;
+     font-weight: 100;
+
+     &.active {
+          overflow: hidden;
+          z-index: -1;
+     }
+}
+
+.hvr-forward {
+     display: inline-block;
+     vertical-align: middle;
+     -webkit-transform: perspective(1px) translateZ(0);
+     transform: perspective(1px) translateZ(0);
+     box-shadow: 0 0 1px transparent;
+     -webkit-transition-duration: 0.3s;
+     transition-duration: 0.3s;
+     -webkit-transition-property: transform;
+     transition-property: transform;
+}
+
+.hvr-forward:active,
+.hvr-forward:focus,
+.hvr-forward:hover {
+     -webkit-transform: translateX(14px);
+     transform: translateX(14px);
+}
+
+/* Grow Shadow */
+.hvr-grow-shadow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+}
+.hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+// No JS styles
+.no-js {
+     #experience-timeline {
+          > div {
+               background: #fff;
+               padding: 10px;
+               margin-bottom: 10px;
+               border: 1px solid $border;
+
+               h3 {
+                    font-size: 1.5em;
+                    font-weight: 300;
+                    // color: $heading;
+                    display: inline-block;
+                    margin: 0;
+               }
+
+               h4 {
+                    font-size: 1.2em;
+                    font-weight: 300;
+                    color: #7e8890;
+                    margin: 0 0 15px;
+               }
+
+               p {
+                    color: $text;
+                    font-size: 0.9em;
+                    margin: 0;
+               }
+          }
+
+          &:after,
+          &:before {
+               content: none;
+          }
+     }
+}
+@keyframes dropHeader {
+     0% {
+          transform: translateY(-100%);
+     }
+
+     100% {
+          transform: translateY(0);
+     }
+}
+
+.header {
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     text-align: center;
+     z-index: 10;
+     animation-name: dropHeader;
+     animation-iteration-count: 1;
+     animation-timing-function: ease;
+     animation-duration: 0.75s;
+
+     ul {
+          display: inline-block;
+          background: $background;
+          text-align: center;
+          padding: 10px;
+          margin: 0;
+          border-bottom-right-radius: 4px;
+          border-bottom-left-radius: 4px;
+     }
+
+     li {
+          display: inline-block;
+     }
+
+     a {
+          display: block;
+          color: $base-color;
+          padding: 10px;
+
+          &:hover {
+               color: $base-color-hover;
+               text-decoration: none;
+               background: #eee;
+               border-radius: 4px;
+          }
+
+          &:focus {
+               color: $base-color;
+               text-decoration: none;
+          }
+     }
+
+     &.active {
+          display: block;
+     }
+
+     &.sticky {
+          position: fixed;
+          z-index: 999;
+     }
+}
+
+// test menu code
+.sidebar {
+     position: fixed;
+     top: 0;
+     right: -250px;
+     width: 250px;
+     height: 100%;
+     transition: 0.6s;
+     z-index: 1;
+     animation: colorchange 50s;
+     /* animation-name followed by duration in seconds*/
+     animation-iteration-count: 200;
+     /* you could also use milliseconds (ms) or something like 2.5s */
+     -webkit-animation: colorchange 50s;
+     /* Chrome and Safari */
+     -webkit-animation-iteration-count: 200;
+}
+
+.active {
+     right: 0;
+     width: 250px;
+}
+
+ul#menu-list {
+     margin: 0;
+     padding: 15vh 0;
+}
+
+ul#menu-list li {
+     margin-top: 3vh;
+     list-style: none;
+}
+
+ul#menu-list li a {
+     font-family: "Roboto";
+     font-weight: 300;
+     font-size: 22px;
+     padding: 5px 20px;
+     color: #fff;
+     display: block;
+     text-decoration: none;
+     // border-bottom: 1px solid rgba(250, 250, 250, 1);
+}
+
+.sidebarBtn {
+     position: fixed;
+     top: 2vh;
+     right: 15px;
+     width: 50px;
+     height: 50px;
+     box-sizing: border-box;
+     cursor: pointer;
+     animation: colorchange 50s;
+     /* animation-name followed by duration in seconds*/
+     animation-iteration-count: 200;
+     /* you could also use milliseconds (ms) or something like 2.5s */
+     -webkit-animation: colorchange 50s;
+     /* Chrome and Safari */
+     -webkit-animation-iteration-count: 200;
+     border: none;
+     outline: none;
+     color: #fff;
+     border-radius: 10px;
+}
+
+.sidebarBtn span {
+     display: block;
+     width: 35px;
+     height: 2px;
+     background: #fff;
+     position: absolute;
+     top: 24px;
+     transition: 0.6s;
+}
+
+.sidebarBtn span:before {
+     content: '';
+     position: absolute;
+     top: -10px;
+     left: 0;
+     width: 100%;
+     height: 2px;
+     background: #fff;
+     transition: 0.6s;
+}
+
+.sidebarBtn span:after {
+     content: '';
+     position: absolute;
+     top: 10px;
+     left: 0;
+     width: 100%;
+     height: 2px;
+     background: #fff;
+}
+
+.sidebarBtn.toggle span {
+     background: transparent;
+}
+
+.sidebarBtn.toggle span:before {
+     top: 0;
+     transform: rotate(45deg);
+}
+
+.sidebarBtn.toggle span:after {
+     top: 0;
+     transform: rotate(-45deg);
+}
+// OLD MENU STUFFS
+#menu {
+     &.active {
+          display: block;
+     }
+}
+
+#mobile-menu-open {
+     display: none;
+     cursor: pointer;
+     position: fixed;
+     right: 15px;
+     top: 10px;
+     color: #fff;
+     font-size: 1.5em;
+     z-index: 20;
+     padding: 0 7px;
+     border-radius: 4px;
+     animation: colorchange 50s;
+     /* animation-name followed by duration in seconds*/
+     animation-iteration-count: 200;
+     /* you could also use milliseconds (ms) or something like 2.5s */
+     -webkit-animation: colorchange 50s;
+     /* Chrome and Safari */
+     -webkit-animation-iteration-count: 200;
+}
+
+#mobile-menu-close {
+     display: none;
+     text-align: right;
+     width: 100%;
+     background: $background;
+     font-size: 1.5em;
+     padding-right: 15px;
+     padding-top: 10px;
+     cursor: pointer;
+     color: $base-color;
+
+     span {
+          font-size: 0.5em;
+          text-transform: uppercase;
+     }
+
+     i {
+          vertical-align: middle;
+     }
+}
+
+footer {
+     padding: 50px 0;
+     height: 160px;
+     animation: colorchange 50s;
+     /* animation-name followed by duration in seconds*/
+     animation-iteration-count: 200;
+     /* you could also use milliseconds (ms) or something like 2.5s */
+     -webkit-animation: colorchange 50s;
+     /* Chrome and Safari */
+     -webkit-animation-iteration-count: 200;
+}
+
+footer p {
+     font-size: 1.4em;
+     font-weight: 500;
+     font-family: "Roboto";
+     color: #FFF !important;
+}
+
+#footer-icons {
+     color: #FFF;
+}
+
+.copyright {
+     padding-top: 20px;
+
+     p {
+          margin: 0;
+          color: $text;
+     }
+}
+
+.top {
+     text-align: center;
+
+     span {
+          cursor: pointer;
+          display: block;
+          margin: 15px auto 0;
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          border: 3px solid #FFF;
+          text-align: center;
+     }
+
+     i {
+          color: $text;
+     }
+}
+
+.social {
+     text-align: right;
+
+     ul {
+          margin: 5px 0 0;
+          padding: 0;
+     }
+
+     li {
+          display: inline-block;
+          font-size: 1.25em;
+          list-style: none;
+     }
+
+     a {
+          display: block;
+          color: $text;
+          padding: 10px;
+
+          &:hover {
+               color: $base-color;
+          }
+     }
+}
+
+.btn-rounded {
+     position: relative;
+     top: 20px;
+     display: inline-block;
+     color: #fff;
+     padding: 15px 25px;
+     border: 1px solid;
+     // border: 1px solid #50d292;
+     border-radius: 30px;
+     @include transition();
+
+     &:hover {
+          color: $base-color;
+          // background: #50d292;
+          text-decoration: none;
+     }
+}
+
+.shadow {
+     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.shadow-large {
+     box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.heading {
+     animation: colorchange 50s;
+     /* animation-name followed by duration in seconds*/
+     animation-iteration-count: 200;
+     /* you could also use milliseconds (ms) or something like 2.5s */
+     -webkit-animation: colorchange 50s;
+     /* Chrome and Safari */
+     -webkit-animation-iteration-count: 200;
+     position: relative;
+     display: inline-block;
+     font-size: 1.3em;
+     font-weight: 300;
+     margin: 0 0 30px;
+     &:after {
+          position: absolute;
+          content: '';
+          top: 100%;
+          height: 1px;
+          width: 50px;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          background: $base-color;
+     }
+}
+
+// .background-alt {
+//      background: $background-alt;
+// }
+
+.my-img {
+     justify-content: center;
+     width: 50%;
+     border: 20px solid green;
+     padding: 10px;
+     margin-bottom: 500px;
+}
+/*
+    --------------------------
+    ----- 4. Lead Styles -----
+    --------------------------
+*/
+@keyframes colorchangeF {
+     0% {
+          color: #80bfff;
+     }
+
+     20% {
+          color: #07c479;
+     }
+
+     40% {
+          color: #b905b9;
+     }
+
+     60% {
+          color: #ddb058;
+     }
+
+     80% {
+          color: #cd5151;
+     }
+
+     100% {
+          color: #80bfff;
+     }
+}
+/* Safari and Chrome - necessary duplicate */
+@-webkit-keyframes colorchangeF {
+     0% {
+          color: #80bfff;
+     }
+
+     20% {
+          color: #07c479;
+     }
+
+     40% {
+          color: #b905b9;
+     }
+
+     60% {
+          color: #ddb058;
+     }
+
+     80% {
+          color: #cd5151;
+     }
+
+     100% {
+          color: #80bfff;
+     }
+}
+
+@keyframes colorchange {
+     0% {
+          background: #80bfff;
+     }
+
+     20% {
+          background: #07c479;
+     }
+
+     40% {
+          background: #b905b9;
+     }
+
+     60% {
+          background: #ddb058;
+     }
+
+     80% {
+          background: #cd5151;
+     }
+
+     100% {
+          background: #80bfff;
+     }
+}
+/* Safari and Chrome - necessary duplicate */
+@-webkit-keyframes colorchange {
+     0% {
+          background: #80bfff;
+     }
+
+     20% {
+          background: #07c479;
+     }
+
+     40% {
+          background: #b905b9;
+     }
+
+     60% {
+          background: #ddb058;
+     }
+
+     80% {
+          background: #cd5151;
+     }
+
+     100% {
+          background: #80bfff;
+     }
+}
+
+#lead {
+     animation: colorchange 50s;
+     /* animation-name followed by duration in seconds*/
+     animation-iteration-count: 200;
+     /* you could also use milliseconds (ms) or something like 2.5s */
+     -webkit-animation: colorchange 50s;
+     /* Chrome and Safari */
+     -webkit-animation-iteration-count: 200;
+     position: relative;
+     // height: 70vh;
+     // min-height: 300px;
+     // min-width: 300px;
+     // pre-edit settings
+     height: 10vh;
+     min-height: 600px;
+     max-height: 650px;
+     // background: url(../images/leadbkg1.jpg);
+     background-size: cover;
+     padding: 15px;
+     overflow: hidden;
+}
+
+#lead-content {
+     position: absolute;
+     z-index: 10;
+     top: auto;
+     left: auto;
+     transform: translate(2%, 8%);
+     text-align: left;
+
+     h1,
+     h2 {
+          margin: 0;
+     }
+
+     h1 {
+          font-family: 'Roboto';
+          color: #fff;
+          font-weight: 100;
+          font-size: 2.8em;
+          letter-spacing: 0.05em;
+          line-height: 0.9em;
+          padding-bottom: 10%;
+     }
+
+     h2 {
+          font-family: 'Roboto';
+          color: #fff;
+          font-weight: 300;
+          font-size: 3.7em;
+          letter-spacing: 0.07em;
+          line-height: 0.9em;
+          padding-top: 3%;
+     }
+}
+
+#subtitle-list li {
+     transform: translate(-4vh,-1vh);
+     display: inline-block;
+}
+
+#small-delay {
+     -webkit-animation-delay: 0.5s;
+     -webkit-animation-duration: 0.6s;
+}
+
+#medium-delay {
+     -webkit-animation-delay: 1s;
+     -webkit-animation-duration: 0.6s;
+}
+
+#long-delay {
+     -webkit-animation-delay: 1.5s;
+     -webkit-animation-duration: 0.6s;
+}
+
+#verylong-delay {
+     padding-left: 1vh;
+     -webkit-animation-delay: 2.5s;
+     -webkit-animation-duration: 0.6s;
+}
+//
+// MY IMAGES!!!
+//
+
+.image {
+     color: #fff;
+     width: 60px;
+     height: 60px;
+}
+
+#img-list li {
+     display: inline-block;
+}
+
+#image-row {
+     transform: translate(-1%, 1540%);
+}
+
+#first-img-wrapper {
+     position: absolute;
+     width: 4%;
+     stroke-width: .01%;
+     // transform: translate(240%, 2%);
+}
+
+#second-img-wrapper {
+     position: absolute;
+     width: 4%;
+     stroke-width: 3%;
+     transform: translate(260%, 0%);
+}
+
+
+#third-img-wrapper {
+     position: absolute;
+     width: 4%;
+     stroke-width: 0.01em;
+     transform: translate(500%, 1%);
+}
+
+#java-img-wrapper {
+     position: absolute;
+     width: 3.3%;
+     stroke-width: 0.01em;
+     transform: translate(882%, -2%);
+}
+
+#rails-img-wrapper {
+     position: absolute;
+     width: 3.4%;
+     stroke-width: 0.01em;
+     transform: translate(1130%, 2%);
+     // transform: translate(1650%, 2%);
+}
+
+#linux-img-wrapper {
+     position: absolute;
+     width: 3.6%;
+     stroke-width: 0.01em;
+     transform: translate(1340%, -2%);
+}
+
+#git-img-wrapper {
+     position: absolute;
+     width: 3.1%;
+     stroke-width: 0.01em;
+     transform: translate(1860%, -2%);
+}
+
+// MY horizontal list in the header
+#menu-outer {
+     position: absolute;
+     transform: translate(-5%, -130%);
+}
+
+.table {
+     display: table;
+     /* Allow the centering to work */
+     margin: 0 auto;
+}
+
+ul#horizontal-list {
+     min-width: 696px;
+     list-style: none;
+     padding-top: 20px;
+}
+
+ul#horizontal-list li {
+     display: inline;
+     text-decoration: none;
+     padding: 27px;
+}
+
+ul#horizontal-list li a {
+     text-decoration: none;
+     font-family: 'Roboto';
+     color: #fff;
+     font-weight: 500;
+     font-size: 1.4em;
+     letter-spacing: 0.1em;
+}
+// Disabling the darkening to the lead bg image for now.
+// #lead-overlay {
+//     position: absolute;
+//     height: 100%;
+//     width: 100%;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//     background: rgba($base-color-hover, 0.8);
+//     z-index: 1;
+// }
+
+#lead-down {
+     position: absolute;
+     left: 0;
+     right: 0;
+     width: 100%;
+     text-align: center;
+     z-index: 10;
+     bottom: 15px;
+     color: #fff;
+
+     span {
+          cursor: pointer;
+          display: block;
+          margin: 0 auto;
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          border: 3px solid lighten(#fff, 25%);
+          text-align: center;
+     }
+
+     i {
+          animation: pulsate 1.5s ease;
+          animation-iteration-count: infinite;
+          padding-top: 5px;
+     }
+}
+@keyframes pulsate {
+     0% {
+          transform: scale(1, 1);
+     }
+
+     50% {
+          transform: scale(1.2, 1.2);
+     }
+
+     100% {
+          transform: scale(1, 1);
+     }
+}
+/*
+    ---------------------------
+    ----- 5. About Styles -----
+    ---------------------------
+*/
+
+#circular-portrait {
+     position: relative;
+     transform: translate(-220%, 150%);
+     text-align: center !important;
+}
+
+#top-border {
+     width: 10px;
+     height: 10px;
+     border-bottom: 1px solid;
+	border-bottom-color:  #ecf0f1;
+}
+
+#about-shift {
+     transform: translate(0%, 90%);
+}
+
+#my-img {
+     transform: translate(-9%,6%);
+}
+
+#about {
+     padding: 80px 15px;
+     // border-bottom: 1px solid grey;
+     font-size: 2em;
+     font-family: 'Roboto';
+     font-weight: 300;
+
+     h2 {
+          animation: colorchangeF 50s;
+          /* animation-name followed by duration in seconds*/
+          animation-iteration-count: 200;
+          /* you could also use milliseconds (ms) or something like 2.5s */
+          -webkit-animation: colorchangeF 50s;
+          /* Chrome and Safari */
+          -webkit-animation-iteration-count: 200;
+     }
+
+     p {
+          color: $text;
+          margin: 35 !important;
+     }
+}
+
+/*
+    --------------------------------
+    ----- 6. Experience Styles -----
+    --------------------------------
+*/
+#experience {
+     font-family: 'Roboto';
+     padding: 130px 15px;
+     text-align: center;
+     // border-bottom: 1px solid $border;
+
+     h2 {
+          animation: colorchangeF 50s;
+          /* animation-name followed by duration in seconds*/
+          animation-iteration-count: 200;
+          /* you could also use milliseconds (ms) or something like 2.5s */
+          -webkit-animation: colorchangeF 50s;
+          /* Chrome and Safari */
+          -webkit-animation-iteration-count: 200;
+          font-size: 2.6em;
+     }
+
+     p {
+          color: $text;
+          margin: 10;
+     }
+
+     ul > li {
+          position: relative;
+          margin: 6;
+          bottom: 3px !important;
+          color: $text;
+          font-size: 12px;
+     }
+}
+
+#experience-timeline {
+     margin: 30px auto 0;
+     position: relative;
+     max-width: 1000px;
+
+     &:before {
+          position: absolute;
+          content: '';
+          top: 0;
+          bottom: 0;
+          left: 303px;
+          right: auto;
+          height: 100%;
+          width: 3px;
+          background: $base-color;
+          z-index: 0;
+     }
+
+     &:after {
+          position: absolute;
+          content: '';
+          width: 3px;
+          height: 40px;
+          background: $base-color;
+          background: linear-gradient(to bottom, $base-color, rgba($base-color, 0));
+          top: 100%;
+          left: 303px;
+     }
+}
+
+.vtimeline-content {
+     margin-left: 350px;
+     background: #fff;
+     border: 1px solid #e6e6e6;
+     padding: 15px;
+     border-radius: 3px;
+     text-align: left;
+
+     h3 {
+          font-size: 1.5em;
+          font-weight: 300;
+          // color: $heading;
+          display: inline-block;
+          margin: 0;
+     }
+
+     h4 {
+          font-size: 1.2em;
+          font-weight: 300;
+          color: #7e8890;
+          margin: 0 0 15px;
+     }
+
+     p {
+          color: $text;
+          font-size: 0.9em;
+          margin: 0;
+     }
+}
+
+.vtimeline-point {
+     position: relative;
+     display: block;
+     vertical-align: top;
+     margin-bottom: 30px;
+}
+
+.vtimeline-icon {
+     position: relative;
+     color: #fff;
+     width: 50px;
+     height: 50px;
+     background: $base-color;
+     border-radius: 50%;
+     float: left;
+     z-index: 99;
+     margin-left: 280px;
+
+     i {
+          display: block;
+          font-size: 2em;
+          margin-top: 10px;
+     }
+}
+
+.vtimeline-date {
+     width: 260px;
+     text-align: right;
+     position: absolute;
+     left: 0;
+     top: 10px;
+     font-weight: 300;
+     color: #374054;
+}
+/*
+    -------------------------------
+    ----- 7. Education Styles -----
+    -------------------------------
+*/
+#education {
+     font-family: 'Roboto';
+     padding: 50px 15px 20px;
+     // border-bottom: 1px solid $border;
+     text-align: center;
+
+     h2 {
+          // color: $heading;
+          animation: colorchangeF 50s;
+          /* animation-name followed by duration in seconds*/
+          animation-iteration-count: 200;
+          /* you could also use milliseconds (ms) or something like 2.5s */
+          -webkit-animation: colorchangeF 50s;
+          /* Chrome and Safari */
+          -webkit-animation-iteration-count: 200;
+          margin-bottom: 50px;
+          font-size: 2.6em;
+     }
+
+}
+
+.education-block {
+     max-width: 700px;
+     margin: 0 auto 30px;
+     padding: 15px;
+     border: 1px solid $border;
+     text-align: left;
+
+     h3 {
+          font-weight: 500;
+          float: left;
+          margin: 0;
+          // color: $heading;
+     }
+
+     span {
+          color: $text;
+          float: right;
+     }
+
+     h4 {
+          color: $text;
+          clear: both;
+          font-weight: 500;
+          margin: 0 0 15px;
+     }
+
+     p,
+     ul {
+          margin: 0;
+          color: $text;
+          font-size: 0.9em;
+     }
+
+     ul {
+          padding: 0 0 0 15px;
+     }
+
+     ul li {
+          font-size: 1.1em;
+     }
+}
+/*
+    -------------------------------
+    ----- 8. Project Styles -----
+    -------------------------------
+*/
+#projects {
+     font-family: 'Roboto';
+     padding: 95px 15px;
+     text-align: center;
+
+     h2 {
+          // color: $heading;
+          animation: colorchangeF 50s;
+          /* animation-name followed by duration in seconds*/
+          animation-iteration-count: 200;
+          /* you could also use milliseconds (ms) or something like 2.5s */
+          -webkit-animation: colorchangeF 50s;
+          /* Chrome and Safari */
+          -webkit-animation-iteration-count: 200;
+          margin-bottom: 50px;
+          font-size: 2.6em;
+     }
+
+     p {
+          color: $text;
+          margin: 10px;
+          text-align: left !important;
+          font-weight: 300;
+          font-size: 1em;
+     }
+
+     a {
+          font-family: 'Roboto';
+          animation: colorchangeF 50s;
+          /* animation-name followed by duration in seconds*/
+          animation-iteration-count: 200;
+          /* you could also use milliseconds (ms) or something like 2.5s */
+          -webkit-animation: colorchangeF 50s;
+          /* Chrome and Safari */
+          -webkit-animation-iteration-count: 200;
+          font-weight: 400;
+     }
+}
+
+.project {
+     position: relative;
+     max-width: 900px;
+     margin: 0 auto 30px;
+     overflow: hidden;
+     background: #fff;
+     border-radius: 4px;
+}
+
+.project-image {
+     float: left;
+}
+
+.project-info {
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     margin-left: 300px;
+     padding: 15px;
+
+     h3 {
+          font-size: 1.5em;
+          font-weight: 300;
+          // color: $heading;
+          margin: 0 0 15px;
+     }
+
+     p {
+          color: $text;
+          margin: 0 0 15px;
+          font-size: 0.9em;
+     }
+}
+
+.no-image {
+     .project-info {
+          position: relative;
+          margin: 0;
+          padding: 30px 15px;
+          transform: none;
+     }
+}
+
+#more-projects {
+     display: none;
+}
+/*
+    -------------------------------
+    ----- 9. Skills Styles -----
+    -------------------------------
+*/
+#skills {
+     padding: 60px 15px;
+     text-align: center;
+     font-family: 'Roboto';
+     h2 {
+          // color: $heading;
+          animation: colorchangeF 50s;
+          /* animation-name followed by duration in seconds*/
+          animation-iteration-count: 200;
+          /* you could also use milliseconds (ms) or something like 2.5s */
+          -webkit-animation: colorchangeF 50s;
+          /* Chrome and Safari */
+          -webkit-animation-iteration-count: 200;
+          margin-bottom: 50px;
+          font-size: 2.6em;
+     }
+
+     ul {
+          display: block;
+          margin: 0 auto;
+          padding: 0;
+          max-width: 800px;
+     }
+
+     li {
+          display: inline-block;
+          margin: 7px;
+          padding: 5px 10px;
+          // color: $heading;
+          background: $background;
+          list-style: none;
+          cursor: default;
+          font-size: 1.6em;
+          font-weight: 400;
+     }
+}
+/*
+    -------------------------------
+    ----- 10. Contact Styles -----
+    -------------------------------
+*/
+#contact {
+     padding: 50px 15px;
+     background: $base-color;
+     text-align: center;
+
+     h2 {
+          margin: 0 0 15px;
+          color: #fff;
+          font-weight: 500;
+     }
+}
+
+#contact-form {
+     max-width: 500px;
+     margin: 0 auto;
+
+     input,
+     textarea {
+          display: block;
+          width: 100%;
+          padding: 10px;
+          border-radius: 4px;
+          border: none;
+          margin-bottom: 10px;
+          background: darken($base-color, 15%);
+          color: #fff;
+          @include transition();
+          @include placeholder {
+               color: #fff;
+          }
+
+          &:focus {
+               outline: none;
+               background: darken($base-color, 25%);
+          }
+     }
+
+     textarea {
+          height: 150px;
+          resize: none;
+     }
+
+     button {
+          display: block;
+          width: 100%;
+          background: #fff;
+          border-radius: 4px;
+          padding: 5px 10px;
+          border: none;
+          color: $base-color;
+          font-weight: 700;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+          @include transition();
+
+          &:hover {
+               box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+          }
+     }
+}
+/*
+    ---------------------------------------
+    ----- 11. Optional Section Styles -----
+    ---------------------------------------
+*/
+.optional-section {
+     padding: 50px 15px;
+     text-align: center;
+     border-top: 1px solid $border;
+
+     h2 {
+          // color: $heading;
+     }
+}
+
+.optional-section-block {
+     max-width: 700px;
+     margin: 0 auto 30px;
+     padding: 15px;
+     border: 1px solid $border;
+     background: #fff;
+     text-align: left;
+
+     h3 {
+          font-weight: 500;
+          margin: 0 0 15px;
+          // color: $heading;
+     }
+
+     h4 {
+          color: $text;
+          clear: both;
+          font-weight: 500;
+          margin: 0 0 15px;
+     }
+
+     p,
+     ul {
+          margin: 0 0 15px;
+          color: $text;
+          font-size: 0.9em;
+     }
+
+     ul {
+          padding: 0 0 0 15px;
+     }
+}
+/*
+    -----------------------------
+    ----- 12. Media Queries -----
+    -----------------------------
+*/
+// Collapse timeline
+@media only screen and (max-width: 750px) {
+     #experience-timeline {
+          &:after,
+          &:before {
+               left: 23px;
+          }
+     }
+
+     .vtimeline-date {
+          width: auto;
+          text-align: left;
+          position: relative;
+          margin-bottom: 15px;
+          display: block;
+          margin-left: 70px;
+     }
+
+     .vtimeline-icon {
+          margin-left: 0;
+     }
+
+     .vtimeline-content {
+          margin-left: 70px;
+     }
+}
+// Medium Devices
+@media only screen and (max-width : 992px) {
+     #lead {
+          height: auto;
+          min-height: auto;
+          max-height: auto;
+          padding: 100px 15px;
+     }
+
+     #lead-content {
+          position: relative;
+          transform: none;
+          left: auto;
+          top: auto;
+
+          h1 {
+               font-size: 3em;
+          }
+
+          h2 {
+               font-size: 1.75em;
+          }
+     }
+
+     #about {
+          text-align: center;
+
+          p {
+               text-align: left;
+               margin: 15px;
+               padding: 0;
+          }
+     }
+}
+// Small Devices
+@media only screen and (max-width : 768px) {
+     header {
+          position: fixed;
+          display: none;
+          z-index: 999;
+          animation: none;
+          bottom: 0;
+          height: 100%;
+     }
+
+     #mobile-menu-close,
+     #mobile-menu-open {
+          display: block;
+     }
+
+     #menu {
+          height: 100%;
+          overflow-y: auto;
+          box-shadow: none;
+          border-radius: 0;
+          width: 100%;
+
+          li {
+               display: block;
+               margin-bottom: 10px;
+          }
+     }
+
+     #lead-content {
+          h1 {
+               font-size: 2em;
+          }
+
+          h2 {
+               font-size: 1.3em;
+          }
+
+          a {
+               padding: 10px 20px;
+          }
+     }
+
+     #lead-down {
+          display: none;
+     }
+
+     .education-block {
+          h3,
+          span {
+               float: none;
+          }
+     }
+
+     .project-image {
+          display: none;
+     }
+
+     .project-info {
+          position: relative;
+          margin: 0;
+          padding: 30px 15px;
+          top: auto;
+          transform: none;
+     }
+
+     footer {
+          text-align: center;
+          width: auto;
+          height: 260px;
+     }
+
+     .social {
+          text-align: center;
+     }
+}
+// Extra Small Devices
+@media only screen and (max-width : 480px) {
+     #lead-content {
+          h1 {
+               font-size: 1.5em;
+          }
+
+          h2 {
+               font-size: 1em;
+          }
+
+          a {
+               font-size: 0.9em;
+               padding: 5px 10px;
+          }
+     }
+}
