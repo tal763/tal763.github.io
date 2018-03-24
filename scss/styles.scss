@@ -258,6 +258,10 @@ body {
      }
 }
 
+#main-page {
+
+}
+
 // test menu code
 .sidebar {
      position: fixed;
@@ -722,7 +726,7 @@ footer p {
 }
 
 #subtitle-list li {
-     transform: translate(-4vh,-1vh);
+     transform: translate(-5vh,-1vh);
      display: inline-block;
 }
 
@@ -1456,6 +1460,7 @@ ul#horizontal-list li a {
 }
 // Small Devices
 @media only screen and (max-width : 768px) {
+     width: auto;
      header {
           position: fixed;
           display: none;
@@ -1532,6 +1537,7 @@ ul#horizontal-list li a {
 }
 // Extra Small Devices
 @media only screen and (max-width : 480px) {
+     width: auto;
      #lead-content {
           h1 {
                font-size: 1.5em;
