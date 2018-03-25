@@ -52,7 +52,8 @@ $text: #74808a;
 }
 
 #heading-background{
-     color: white;
+     border-radius: 5px;
+     color: #FFF;
      animation: colorchange 50s;
      /* animation-name followed by duration in seconds*/
      animation-iteration-count: 200;
@@ -258,9 +259,13 @@ body {
      }
 }
 
-#main-page {
-
-}
+// #main-page {
+//      // opacity: 0.5 !important;
+// position: fixed;
+// height: 5000px;
+// width: 5000px;
+// opacity: 0.5;
+// }
 
 // test menu code
 .sidebar {
@@ -307,11 +312,12 @@ ul#menu-list li a {
 }
 
 .sidebarBtn {
+     align-content: center;
      position: fixed;
      top: 2vh;
      right: 15px;
-     width: 50px;
-     height: 45px;
+     width: 45px;
+     height: 40px;
      box-sizing: border-box;
      cursor: pointer;
      animation: colorchange 50s;
@@ -332,11 +338,11 @@ ul#menu-list li a {
      margin: auto;
      width: 35px;
      height: 1px;
+     right: .4vw;
      background: #fff;
      position: absolute;
-     top: 22px;
+     top: 3.4vh;
      transition: 0.6s;
-     height: 1px;
 }
 
 .sidebarBtn span:before {
@@ -434,8 +440,9 @@ footer {
 }
 
 footer p {
-     font-size: 1.4em;
+     font-size: 1.1em;
      font-weight: 500;
+     letter-spacing: 1px;
      font-family: "Roboto";
      color: #FFF !important;
 }
@@ -1113,7 +1120,7 @@ ul#horizontal-list li a {
 .education-block {
      max-width: 700px;
      margin: 0 auto 30px;
-     padding: 15px;
+     padding: 25px;
      border: 1px solid $border;
      text-align: left;
 
@@ -1158,7 +1165,7 @@ ul#horizontal-list li a {
 */
 #projects {
      font-family: 'Roboto';
-     padding: 95px 15px;
+     padding: 100px 15px;
      text-align: center;
 
      h2 {
