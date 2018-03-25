@@ -138,11 +138,11 @@
      var clicks = 0;
      $('.sidebarBtn').click(function() {
          if (clicks %2 == 0){
-              $('#main-page').animate({
+              $('footer').animate({
                   opacity: '0.4'
              });
          } else{
-              $('#main-page').animate({
+              $('footer').animate({
                  opacity: '1'
             });
          }
@@ -152,11 +152,11 @@
      var clicks = 0;
      $('.sidebarBtn').click(function() {
          if (clicks %2 == 0){
-              $('footer').animate({
+              $('.main-page').animate({
                   opacity: '0.4'
              });
          } else{
-              $('footer').animate({
+              $('.main-page').animate({
                  opacity: '1'
             });
          }
