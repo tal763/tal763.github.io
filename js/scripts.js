@@ -125,42 +125,58 @@
      $('.sidebarBtn').click(function() {
          if (clicks %2 == 0){
               $('#lead').animate({
-                  opacity: '0.4'
+                  opacity: '0.2'
              });
+
+             $('footer').animate({
+                 opacity: '0.2'
+            });
+
+            $('.main-page').animate({
+               opacity: '0.2'
+          });
          } else{
               $('#lead').animate({
                  opacity: '1'
             });
+
+            $('footer').animate({
+               opacity: '1'
+          });
+
+          $('.main-page').animate({
+             opacity: '1'
+        });
          }
          ++clicks;
      });
 
-     var clicks = 0;
-     $('.sidebarBtn').click(function() {
-         if (clicks %2 == 0){
-              $('footer').animate({
-                  opacity: '0.4'
-             });
-         } else{
-              $('footer').animate({
-                 opacity: '1'
-            });
-         }
-         ++clicks;
-     });
-
-     var clicks = 0;
-     $('.sidebarBtn').click(function() {
-         if (clicks %2 == 0){
-              $('.main-page').animate({
-                  opacity: '0.4'
-             });
-         } else{
-              $('.main-page').animate({
-                 opacity: '1'
-            });
-         }
-         ++clicks;
-     });
+     // var clicks = 0;
+     // $('.sidebarBtn').click(function() {
+     //     if (clicks %2 == 0){
+     //          $('footer').animate({
+     //              opacity: '0.4'
+     //         });
+     //     } else{
+     //          $('footer').animate({
+     //             opacity: '1'
+     //        });
+     //     }
+     //     ++clicks;
+     // });
+     //
+     // var clicks = 0;
+     // $('.sidebarBtn').click(function() {
+     //     if (clicks %2 == 0){
+     //          $('.main-page').animate({
+     //              opacity: '0.4'
+     //         });
+     //     } else{
+     //          $('.main-page').animate({
+     //             opacity: '1'
+     //        });
+     //     }
+     //     ++clicks;
+     // });
 
 })(jQuery);
