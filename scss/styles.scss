@@ -42,11 +42,11 @@ $border: #dcd9d9;
 $text: #74808a;
 
 #heading-font{
-     animation: colorchangeF 50s;
+     animation: colorchangeF 30s;
      /* animation-name followed by duration in seconds*/
      animation-iteration-count: 200;
      /* you could also use milliseconds (ms) or something like 2.5s */
-     -webkit-animation: colorchangeF 50s;
+     -webkit-animation: colorchangeF 30s;
      /* Chrome and Safari */
      -webkit-animation-iteration-count: 200;
 }
@@ -54,21 +54,21 @@ $text: #74808a;
 #heading-background{
      border-radius: 5px;
      color: #FFF;
-     animation: colorchange 50s;
+     animation: colorchange 30s;
      /* animation-name followed by duration in seconds*/
      animation-iteration-count: 200;
      /* you could also use milliseconds (ms) or something like 2.5s */
-     -webkit-animation: colorchange 50s;
+     -webkit-animation: colorchange 30s;
      /* Chrome and Safari */
      -webkit-animation-iteration-count: 200;
 }
 
 // strong {
-//      animation: colorchangeF 50s;
+//      animation: colorchangeF 30s;
 //      /* animation-name followed by duration in seconds*/
 //      animation-iteration-count: 200;
 //      /* you could also use milliseconds (ms) or something like 2.5s */
-//      -webkit-animation: colorchangeF 50s;
+//      -webkit-animation: colorchangeF 30s;
 //      /* Chrome and Safari */
 //      -webkit-animation-iteration-count:F 200;
 // }
@@ -272,11 +272,11 @@ body {
      height: 100%;
      transition: 0.6s;
      z-index: 1;
-     animation: colorchange 50s;
+     animation: colorchange 30s;
      /* animation-name followed by duration in seconds*/
      animation-iteration-count: 200;
      /* you could also use milliseconds (ms) or something like 2.5s */
-     -webkit-animation: colorchange 50s;
+     -webkit-animation: colorchange 30s;
      /* Chrome and Safari */
      -webkit-animation-iteration-count: 200;
 }
@@ -316,11 +316,11 @@ ul#menu-list li a {
      height: 40px;
      box-sizing: border-box;
      cursor: pointer;
-     animation: colorchange 50s;
+     animation: colorchange 30s;
      /* animation-name followed by duration in seconds*/
      animation-iteration-count: 200;
      /* you could also use milliseconds (ms) or something like 2.5s */
-     -webkit-animation: colorchange 50s;
+     -webkit-animation: colorchange 30s;
      /* Chrome and Safari */
      -webkit-animation-iteration-count: 200;
      border: none;
@@ -393,11 +393,11 @@ ul#menu-list li a {
      z-index: 20;
      padding: 0 7px;
      border-radius: 4px;
-     animation: colorchange 50s;
+     animation: colorchange 30s;
      /* animation-name followed by duration in seconds*/
      animation-iteration-count: 200;
      /* you could also use milliseconds (ms) or something like 2.5s */
-     -webkit-animation: colorchange 50s;
+     -webkit-animation: colorchange 30s;
      /* Chrome and Safari */
      -webkit-animation-iteration-count: 200;
 }
@@ -426,11 +426,11 @@ ul#menu-list li a {
 footer {
      padding: 50px 0;
      height: 160px;
-     animation: colorchange 50s;
+     animation: colorchange 30s;
      /* animation-name followed by duration in seconds*/
      animation-iteration-count: 200;
      /* you could also use milliseconds (ms) or something like 2.5s */
-     -webkit-animation: colorchange 50s;
+     -webkit-animation: colorchange 30s;
      /* Chrome and Safari */
      -webkit-animation-iteration-count: 200;
 }
@@ -527,11 +527,11 @@ footer p {
 }
 
 .heading {
-     animation: colorchange 50s;
+     animation: colorchange 30s;
      /* animation-name followed by duration in seconds*/
      animation-iteration-count: 200;
      /* you could also use milliseconds (ms) or something like 2.5s */
-     -webkit-animation: colorchange 50s;
+     -webkit-animation: colorchange 30s;
      /* Chrome and Safari */
      -webkit-animation-iteration-count: 200;
      position: relative;
@@ -673,11 +673,11 @@ footer p {
 }
 
 #lead {
-     animation: colorchange 50s;
+     animation: colorchange 30s;
      /* animation-name followed by duration in seconds*/
      animation-iteration-count: 200;
      /* you could also use milliseconds (ms) or something like 2.5s */
-     -webkit-animation: colorchange 50s;
+     -webkit-animation: colorchange 30s;
      /* Chrome and Safari */
      -webkit-animation-iteration-count: 200;
      position: relative;
@@ -942,11 +942,11 @@ ul#horizontal-list li a {
      font-weight: 300;
 
      h2 {
-          animation: colorchangeF 50s;
+          animation: colorchangeF 30s;
           /* animation-name followed by duration in seconds*/
           animation-iteration-count: 200;
           /* you could also use milliseconds (ms) or something like 2.5s */
-          -webkit-animation: colorchangeF 50s;
+          -webkit-animation: colorchangeF 30s;
           /* Chrome and Safari */
           -webkit-animation-iteration-count: 200;
      }
@@ -969,11 +969,11 @@ ul#horizontal-list li a {
      // border-bottom: 1px solid $border;
 
      h2 {
-          animation: colorchangeF 50s;
+          animation: colorchangeF 30s;
           /* animation-name followed by duration in seconds*/
           animation-iteration-count: 200;
           /* you could also use milliseconds (ms) or something like 2.5s */
-          -webkit-animation: colorchangeF 50s;
+          -webkit-animation: colorchangeF 30s;
           /* Chrome and Safari */
           -webkit-animation-iteration-count: 200;
           font-size: 2.6em;
@@ -1100,11 +1100,11 @@ ul#horizontal-list li a {
 
      h2 {
           // color: $heading;
-          animation: colorchangeF 50s;
+          animation: colorchangeF 30s;
           /* animation-name followed by duration in seconds*/
           animation-iteration-count: 200;
           /* you could also use milliseconds (ms) or something like 2.5s */
-          -webkit-animation: colorchangeF 50s;
+          -webkit-animation: colorchangeF 30s;
           /* Chrome and Safari */
           -webkit-animation-iteration-count: 200;
           margin-bottom: 50px;
@@ -1166,11 +1166,11 @@ ul#horizontal-list li a {
 
      h2 {
           // color: $heading;
-          animation: colorchangeF 50s;
+          animation: colorchangeF 30s;
           /* animation-name followed by duration in seconds*/
           animation-iteration-count: 200;
           /* you could also use milliseconds (ms) or something like 2.5s */
-          -webkit-animation: colorchangeF 50s;
+          -webkit-animation: colorchangeF 30s;
           /* Chrome and Safari */
           -webkit-animation-iteration-count: 200;
           margin-bottom: 50px;
@@ -1187,11 +1187,11 @@ ul#horizontal-list li a {
 
      a {
           font-family: 'Roboto';
-          animation: colorchangeF 50s;
+          animation: colorchangeF 30s;
           /* animation-name followed by duration in seconds*/
           animation-iteration-count: 200;
           /* you could also use milliseconds (ms) or something like 2.5s */
-          -webkit-animation: colorchangeF 50s;
+          -webkit-animation: colorchangeF 30s;
           /* Chrome and Safari */
           -webkit-animation-iteration-count: 200;
           font-weight: 400;
@@ -1255,11 +1255,11 @@ ul#horizontal-list li a {
      font-family: 'Roboto';
      h2 {
           // color: $heading;
-          animation: colorchangeF 50s;
+          animation: colorchangeF 30s;
           /* animation-name followed by duration in seconds*/
           animation-iteration-count: 200;
           /* you could also use milliseconds (ms) or something like 2.5s */
-          -webkit-animation: colorchangeF 50s;
+          -webkit-animation: colorchangeF 30s;
           /* Chrome and Safari */
           -webkit-animation-iteration-count: 200;
           margin-bottom: 50px;
@@ -1430,10 +1430,9 @@ ul#horizontal-list li a {
 // Medium Devices
 @media only screen and (max-width : 992px) {
      #lead {
-          height: auto;
+          height: 80vh;
           min-height: auto;
           max-height: auto;
-          padding: 100px 15px;
      }
 
      #lead-content {
@@ -1443,12 +1442,45 @@ ul#horizontal-list li a {
           top: auto;
 
           h1 {
-               font-size: 3em;
+               font-size: 2em;
           }
 
           h2 {
-               font-size: 1.75em;
+               font-size: 2.5em;
           }
+     }
+
+     #menu-outer {
+          font-size: .8em
+     }
+
+     ul#horizontal-list li {
+          display: inline;
+          text-decoration: none;
+          padding: 15px;
+     }
+
+     ul#horizontal-list li a {
+          text-decoration: none;
+          font-family: 'Roboto';
+          color: #fff;
+          font-weight: 400;
+          font-size: 1.4em;
+          letter-spacing: 0.1em;
+     }
+
+     #img-list li {
+          display: inline-block;
+     }
+
+     #image-row {
+          transform: translate(.5vh, 10vh);
+     }
+
+     .image {
+          color: #fff;
+          width: 60px;
+          height: 60px;
      }
 
      #about {
@@ -1492,17 +1524,17 @@ ul#horizontal-list li a {
      }
 
      #lead-content {
-          h1 {
-               font-size: 2em;
-          }
-
-          h2 {
-               font-size: 1.3em;
-          }
-
-          a {
-               padding: 10px 20px;
-          }
+          // h1 {
+          //      font-size: 2em;
+          // }
+          //
+          // h2 {
+          //      font-size: 1.3em;
+          // }
+          //
+          // a {
+          //      padding: 10px;
+          // }
      }
 
      #lead-down {
