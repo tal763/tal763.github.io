@@ -12,6 +12,8 @@
 
 (function($) {
 
+     var clicks = 0;
+
     // Remove no-js class
     $('html').removeClass('no-js');
 
@@ -54,6 +56,170 @@
             $('header, body').removeClass('active');
        }
     });
+
+    // restore sidebarbtn, close sidebar menu, return opacity
+    // on sidebar menu subtitle click
+
+    $('#sidebar-title-about').click(function() {
+         $('.sidebar').removeClass('active');
+         $('.sidebarBtn').removeClass('toggle');
+
+         if (clicks %2 == 0){
+              $('#lead').animate({
+                  opacity: '0.2'
+             });
+
+             $('footer').animate({
+                 opacity: '0.2'
+            });
+
+            $('.main-page').animate({
+               opacity: '0.2'
+          });
+         } else{
+              $('#lead').animate({
+                 opacity: '1'
+            });
+
+            $('footer').animate({
+               opacity: '1'
+          });
+
+          $('.main-page').animate({
+             opacity: '1'
+        });
+         }
+         ++clicks;
+    });
+
+   $('#sidebar-title-skills').click(function() {
+        $('.sidebar').removeClass('active');
+        $('.sidebarBtn').removeClass('toggle');
+
+        if (clicks %2 == 0){
+            $('#lead').animate({
+                 opacity: '0.2'
+            });
+
+            $('footer').animate({
+                opacity: '0.2'
+           });
+
+           $('.main-page').animate({
+              opacity: '0.2'
+         });
+        } else{
+            $('#lead').animate({
+                opacity: '1'
+           });
+
+           $('footer').animate({
+              opacity: '1'
+         });
+
+         $('.main-page').animate({
+            opacity: '1'
+       });
+        }
+        ++clicks;
+   });
+
+   $('#sidebar-title-experience').click(function() {
+        $('.sidebar').removeClass('active');
+        $('.sidebarBtn').removeClass('toggle');
+
+        if (clicks %2 == 0){
+            $('#lead').animate({
+                 opacity: '0.2'
+            });
+
+            $('footer').animate({
+                opacity: '0.2'
+           });
+
+           $('.main-page').animate({
+              opacity: '0.2'
+         });
+        } else{
+            $('#lead').animate({
+                opacity: '1'
+           });
+
+           $('footer').animate({
+              opacity: '1'
+         });
+
+         $('.main-page').animate({
+            opacity: '1'
+       });
+        }
+        ++clicks;
+   });
+
+   $('#sidebar-title-education').click(function() {
+        $('.sidebar').removeClass('active');
+        $('.sidebarBtn').removeClass('toggle');
+
+        if (clicks %2 == 0){
+            $('#lead').animate({
+                 opacity: '0.2'
+            });
+
+            $('footer').animate({
+                opacity: '0.2'
+           });
+
+           $('.main-page').animate({
+              opacity: '0.2'
+         });
+        } else{
+            $('#lead').animate({
+                opacity: '1'
+           });
+
+           $('footer').animate({
+              opacity: '1'
+         });
+
+         $('.main-page').animate({
+            opacity: '1'
+       });
+        }
+        ++clicks;
+   });
+
+   $('#sidebar-title-projects').click(function() {
+        $('.sidebar').removeClass('active');
+        $('.sidebarBtn').removeClass('toggle');
+
+        if (clicks %2 == 0){
+            $('#lead').animate({
+                 opacity: '0.2'
+            });
+
+            $('footer').animate({
+                opacity: '0.2'
+           });
+
+           $('.main-page').animate({
+              opacity: '0.2'
+         });
+        } else{
+            $('#lead').animate({
+                opacity: '1'
+           });
+
+           $('footer').animate({
+              opacity: '1'
+         });
+
+         $('.main-page').animate({
+            opacity: '1'
+       });
+        }
+        ++clicks;
+   });
+
 
     // Scroll to top
     $('#to-top').click(function() {
@@ -121,7 +287,6 @@
     //      });
     // });
 
-    var clicks = 0;
      $('.sidebarBtn').click(function() {
          if (clicks %2 == 0){
               $('#lead').animate({

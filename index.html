@@ -32,8 +32,8 @@
                $('.sidebarBtn').click(function() {
                     $('.sidebar').toggleClass('active');
                     $('.sidebarBtn').toggleClass('toggle');
-               })
-          })
+               });
+          });
      </script>
 
      <meta name="description" content="Tanner Lane's Software Developer Porfolio">
@@ -48,15 +48,16 @@ Tanner personal portfolio, Tanner Lane personal porfolio">
      <!-- my submenu! -->
      <div class="sidebar">
           <ul id="menu-list">
-               <li> <a class="hvr-forward" href="#about"> About </a> </li>
-               <li> <a class="hvr-forward" href="#skills"> Skills </a> </li>
-               <li> <a class="hvr-forward" href="#experience"> Experience </a> </li>
-               <li> <a class="hvr-forward" href="#education"> Education </a> </li>
-               <li> <a class="hvr-forward" href="#projects"> Projects </a> </li>
+               <li> <a id="sidebar-title-about" class="hvr-forward" href="#about"> About </a> </li>
+               <li> <a id="sidebar-title-skills" class="hvr-forward" href="#skills"> Skills </a> </li>
+               <li> <a id="sidebar-title-experience" class="hvr-forward" href="#experience"> Experience </a> </li>
+               <li> <a id="sidebar-title-education" class="hvr-forward" href="#education"> Education </a> </li>
+               <li> <a id="sidebar-title-projects" class="hvr-forward" href="#projects"> Projects </a> </li>
           </ul>
-          <button class="sidebarBtn">
-      <span></span>
-</button>
+
+     <button class="sidebarBtn">
+           <span class="sidebar-button-hamburgerlines"></span>
+     </button>
   </div>
 
     <div id="lead">
