@@ -333,7 +333,7 @@ ul#menu-list li a {
      display: block;
      margin: auto;
      width: 35px;
-     height: 1px;
+     height: 2px;
      right: 3px;
      background: #fff;
      position: absolute;
@@ -1515,7 +1515,7 @@ ul#horizontal-list li a {
 }
 // Small Devices
 @media only screen and (max-width : 768px) {
-     width: auto;
+     width: 768px;
      header {
           position: fixed;
           display: none;
