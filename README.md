@@ -4,5 +4,4 @@
 
 ###### NOTE: The website is still a work in progress and is currently best viewed best on Mozilla Firefox, on screens 1100px or greater.
 
-I thoroughly enjoy frontend technologies, and relish any opportunity to hone my skills.
 
