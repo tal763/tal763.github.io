@@ -1632,18 +1632,120 @@ ul#horizontal-list li a {
 // Extra Small Devices
 @media only screen and (max-width : 480px) {
      width: auto;
-     #lead-content {
+
+     #lead-down {
+          display: none;
+     }
+
+     #lead{
           h1 {
-               font-size: 1.5em;
+               font-size: 3.2em ;
           }
 
           h2 {
-               font-size: 1em;
+               font-size: 2.5em;
+               padding-left: 1vw;
           }
 
-          a {
-               font-size: 0.9em;
-               padding: 5px 10px;
+          #subtitle-list{
+               transform: translate(-5vw, -2vh);
           }
+          width: 795px;
+          height: 460px;
+     }
+
+
+     #about{
+          width: 790px;
+     }
+
+     #skills{
+          width: 790px;
+     }
+
+     #experience{
+          width: 790px;
+     }
+
+     #education{
+          width: 790px;
+     }
+
+     #projects{
+          width: 790px;
+     }
+
+     footer {
+          width: 795px !important;
+     }
+
+     #my-img {
+          padding-bottom: 50px;
+          transform: translate(225px, 40px);
+          width: 250px;
+          height: 250px;
+     }
+
+     p {
+          font-size: 20px;
+     }
+
+     .sidebarBtn{
+
+     }
+
+     #html-img-wrapper {
+          position: absolute;
+          width: 6%;
+          stroke-width: .01%;
+          // transform: translate(240%, 2%);
+     }
+
+     #second-img-wrapper {
+          position: absolute;
+          width: 6%;
+          stroke-width: 3%;
+          transform: translate(240%, 0%);
+     }
+
+
+     #third-img-wrapper {
+          position: absolute;
+          width: 6%;
+          stroke-width: 0.01em;
+          transform: translate(460%, 1%);
+     }
+
+     #java-img-wrapper {
+          position: absolute;
+          width: 5.1%;
+          stroke-width: 0.01em;
+          transform: translate(780%, -2%);
+     }
+
+     #rails-img-wrapper {
+          position: absolute;
+          width: 5.2%;
+          stroke-width: 0.01em;
+          transform: translate(1020%, 2%);
+          // transform: translate(1650%, 2%);
+     }
+
+     #linux-img-wrapper {
+          position: absolute;
+          width: 5.1%;
+          stroke-width: 0.01em;
+          transform: translate(1310%, 5%);
+     }
+
+     #git-img-wrapper {
+          position: absolute;
+          width: 4.4%;
+          stroke-width: 0.01em;
+          transform: translate(1810%, 4%);
+     }
+
+     #image-row > #img-list {
+          transform: translate(-5vw, 3vh);
      }
 }
