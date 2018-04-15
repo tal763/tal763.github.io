@@ -1639,21 +1639,22 @@ ul#horizontal-list li a {
 
      #lead{
           h1 {
-               font-size: 3.2em ;
+               font-size: 3.8em ;
           }
 
           h2 {
-               font-size: 2.5em;
+               font-size: 3.3em;
                padding-left: 1vw;
           }
 
           #subtitle-list{
-               transform: translate(-5vw, -2vh);
+               transform: translate(-2vw, -2vh);
           }
           width: 795px;
           height: 460px;
      }
 
+     #menu-outer{ display:none; }
 
      #about{
           width: 790px;
@@ -1746,6 +1747,6 @@ ul#horizontal-list li a {
      }
 
      #image-row > #img-list {
-          transform: translate(-5vw, 3vh);
+          transform: translate(-5vw, -2vh);
      }
 }
