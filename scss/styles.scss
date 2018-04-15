@@ -1515,15 +1515,6 @@ ul#horizontal-list li a {
 }
 // Small Devices
 @media only screen and (max-width : 768px) {
-     width: 768px;
-     header {
-          position: fixed;
-          display: none;
-          z-index: 999;
-          animation: none;
-          bottom: 0;
-          height: 100%;
-     }
 
      #mobile-menu-close,
      #mobile-menu-open {
@@ -1544,21 +1535,69 @@ ul#horizontal-list li a {
      }
 
      #lead-content {
-          // h1 {
-          //      font-size: 2em;
-          // }
-          //
-          // h2 {
-          //      font-size: 1.3em;
-          // }
-          //
-          // a {
-          //      padding: 10px;
-          // }
+          h1 {
+               font-size: 1.7em;
+          }
+
+          h2 {
+               font-size: 2.6em;
+          }
+
+
+     #subtitle-list{
+          transform: translateX(12px);
+     }
      }
 
      #lead-down {
           display: none;
+     }
+
+     #lead{
+          width: 795px;
+          height: 460px;
+     }
+
+     #about{
+          width: 790px;
+     }
+
+     #skills{
+          width: 790px;
+     }
+
+     #experience{
+          width: 790px;
+     }
+
+     #education{
+          width: 790px;
+     }
+
+     #projects{
+          width: 790px;
+     }
+
+     footer {
+          width: 795px !important;
+     }
+
+     #my-img {
+          padding-bottom: 50px;
+          transform: translate(-15px, 40px);
+     }
+
+     #about-shift{
+          transform: translate(-10px, 60px);
+     }
+
+     #image-row > #img-list {
+          transform: translate(-5vw, -8vh);
+     }
+
+     #menu-outer{
+          transform: translate(-4vw, -8vh);
+          font-size: 0.9em;
      }
 
      .education-block {
