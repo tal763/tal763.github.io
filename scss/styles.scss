@@ -1553,34 +1553,34 @@ ul#horizontal-list li a {
           display: none;
      }
 
-     #lead{
-          width: 795px;
-          height: 460px;
-     }
-
-     #about{
-          width: 790px;
-     }
-
-     #skills{
-          width: 790px;
-     }
-
-     #experience{
-          width: 790px;
-     }
-
-     #education{
-          width: 790px;
-     }
-
-     #projects{
-          width: 790px;
-     }
-
-     footer {
-          width: 795px !important;
-     }
+     // #lead{
+     //      width: 795px;
+     //      height: 460px;
+     // }
+     //
+     // #about{
+     //      width: 790px;
+     // }
+     //
+     // #skills{
+     //      width: 790px;
+     // }
+     //
+     // #experience{
+     //      width: 790px;
+     // }
+     //
+     // #education{
+     //      width: 790px;
+     // }
+     //
+     // #projects{
+     //      width: 790px;
+     // }
+     //
+     // footer {
+     //      width: 795px !important;
+     // }
 
      #my-img {
           padding-bottom: 50px;
@@ -1657,27 +1657,129 @@ ul#horizontal-list li a {
      #menu-outer{ display:none; }
 
      #about{
+
           width: 790px;
+
+          h2{
+               font-size: 2.7em;
+          }
+
+          p{
+               font-size: 1.5em;
+               font-weight: 300;
+          }
      }
 
      #skills{
+
           width: 790px;
+
+          h2{
+               font-size: 5.1em;
+          }
+
+          ul li{
+               font-size: 2.6em;
+          }
+     }
+
+     .vtimeline-date{
+          font-size: 2em;
+          font-weight: 500;
      }
 
      #experience{
           width: 790px;
+
+          h2{
+               font-size: 5.1em;
+          }
+
+          h3{
+               font-size: 3em;
+          }
+
+          h4{
+               font-size: 2.6em;
+          }
+     }
+
+
+     .education-date{
+          font-size: 2.3em;
      }
 
      #education{
           width: 790px;
+          padding: 5px;
+
+          h2{
+               font-size: 5.1em;
+          }
+
+          h3{
+               font-size: 2.7em;
+          }
+
+          h4{
+               font-size: 2.2em;
+          }
+
+          ul li {
+               font-size: 2.2em;
+          }
+
      }
 
      #projects{
           width: 790px;
+
+          h2{
+               font-size: 5.1em;
+          }
+
+          h3{
+               font-size: 3em;
+          }
+
+          a{
+               font-size: 2.5em;
+          }
+
+          p{
+               font-size: 2.5em;
+          }
      }
 
      footer {
+          height: 360px;
           width: 795px !important;
+
+          p{
+               font-size: 2em;
+
+          }
+
+          ul li{
+               padding-bottom: 10px;
+          }
+          i{
+               font-size: 2.7em;
+               padding: 10px;
+          }
+
+     }
+
+     #to-top{
+          width: 75px;
+          height: 75px;
+          margin-top: 20px;
+          margin-bottom: 20px;
+          // margin: 15px auto 0;
+     }
+
+     #footer-icons{
+          font-size: 2em;
      }
 
      #my-img {
